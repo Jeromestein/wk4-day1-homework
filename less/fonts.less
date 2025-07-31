@@ -1,0 +1,41 @@
+// Font Variables
+@font-family-sans: sans-serif;
+@font-weight-bold: bold;
+@font-weight-regular: normal;
+
+// Font Mixins
+.bold-text() {
+    font-weight: @font-weight-bold;
+    font-family: @font-family-sans;
+}
+
+.regular-text() {
+    font-weight: @font-weight-regular;
+    font-family: @font-family-sans;
+}
+
+.uppercase-text() {
+    text-transform: uppercase;
+}
+
+// Typography Mixins
+.heading-text() {
+    .bold-text();
+    color: @text-black;
+}
+
+.sale-text() {
+    .bold-text();
+    .uppercase-text();
+    color: @primary-red;
+}
+
+.price-text() {
+    .bold-text();
+    color: @text-black;
+}
+
+.button-text() {
+    .regular-text();
+    color: @primary-white;
+} 
